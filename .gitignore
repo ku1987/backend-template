@@ -1,0 +1,7 @@
+/node_modules
+/server/node_modules
+/client/node_modules
+/_client/node_modules
+/client/.next
+*yarn.lock
+.env
