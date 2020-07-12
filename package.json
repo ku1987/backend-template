@@ -16,6 +16,7 @@
     "@koa/cors": "^3.0.0",
     "compression": "^1.7.4",
     "dotenv": "^8.2.0",
+    "eslint-config-airbnb": "^18.2.0",
     "knex": "^0.21.2",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.2.1",
@@ -30,6 +31,11 @@
     "uuidv4": "^6.1.1"
   },
   "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.3",
     "nodemon": "^2.0.2"
   }
 }

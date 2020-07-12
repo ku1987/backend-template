@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "airbnb"
+  ],
+  "plugins": [
+    // ...
+  ],
+  "rules": {
+    // ...
+    "no-console": "off"
+  }
+}
