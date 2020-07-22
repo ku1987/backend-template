@@ -1,24 +1,22 @@
-const Koa = require('@types/koa');
-const bodyParser = require('koa-bodyparser');
-const compression = require('compression');
-const koaConnect = require('koa-connect');
-const koaBunyanLogger = require('koa-bunyan-logger');
+import Koa from 'koa';
+import bodyParser from 'koa-bodyparser';
+import compression from 'compression';
+import koaConnect from 'koa-connect';
+import koaBunyanLogger from 'koa-bunyan-logger';
 
 // const serve = require('koa-static');
-const json = require('koa-json');
+import json from 'koa-json';
 // const path = require('path');
-const cors = require('@koa/cors');
+import cors from '@koa/cors';
 
-const indexRouter = require('./routes/index');
-const worksRouter = require('./routes/works');
-const contactsRouter = require('./routes/contacts');
+import indexRouter from './routes/index';
+import worksRouter from './routes/works';
+import contactsRouter from './routes/contacts';
 
-import { ConfigObject } from './config';
-
-const config: ConfigObject = require('./config');
+import config from './config';
 
 const { port } = config;
-const app: any = new Koa();
+const app = new Koa();
 
 app.use(koaBunyanLogger());
 

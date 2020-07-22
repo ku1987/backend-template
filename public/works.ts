@@ -7,7 +7,7 @@ interface Works {
   url: string,
 }
 
-const works: Works = [
+const works: Works[] = [
   {
     id: 1,
     title: 'site1',
@@ -34,4 +34,4 @@ const works: Works = [
   },
 ];
 
-module.exports = works;
+export default works;

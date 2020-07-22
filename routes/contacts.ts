@@ -66,4 +66,4 @@ router.post('/contacts', async (ctx) => {
   }
 });
 
-module.exports = router;
+export default router;

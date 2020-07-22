@@ -9,4 +9,4 @@ router.get('/health', async (ctx) => {
   ctx.body = { msg: 'OK.' };
 });
 
-module.exports = router;
+export default router;

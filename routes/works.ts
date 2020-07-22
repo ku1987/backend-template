@@ -28,4 +28,4 @@ router.get('/work/:id', async (ctx) => {
   };
 });
 
-module.exports = router;
+export default router;
