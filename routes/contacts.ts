@@ -1,7 +1,8 @@
-const Router = require('koa-router');
-const { uuid } = require('uuidv4');
-const contactsQuery = require('../db/queries/contact');
-const common = require('./common');
+import Router from 'koa-router';
+import { uuid } from 'uuidv4';
+import koaBody from 'koa-body';
+import contactsQuery from '../db/queries/contact';
+import common from './common';
 
 const router = new Router();
 

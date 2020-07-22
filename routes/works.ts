@@ -1,5 +1,5 @@
-const Router = require('koa-router');
-const works = require('../public/works');
+import Router from 'koa-router';
+import works from '../public/works';
 
 const router = new Router();
 

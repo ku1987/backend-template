@@ -1,8 +1,19 @@
-const knex = require('../knex');
-const TABLES = require('../tables');
+import knex from '../knex';
+import TABLES from '../tables';
 
+interface Contact {
+  contactId: string,
+  name: string,
+  mail: string,
+  content: string,
+  createdAt: number,
+}
+
+/**
+ * @returns {Contact[]} Array of contracts.
+ */
 const getAllContacts = async () => {
-  const contacts = await knex(TABLES.CONTACTS);
+  const contacts: Contact[] = await knex(TABLES.CONTACTS);
   if (contacts.length === 0) {
     return null;
   }
@@ -10,7 +21,7 @@ const getAllContacts = async () => {
 };
 
 const getSingleContact = async (filter) => {
-  const contact = await knex(TABLES.CONTACTS)
+  const contact: Contact[] = await knex(TABLES.CONTACTS)
     .where(filter);
   if (contact.length !== 1) {
     return null;
@@ -24,7 +35,7 @@ const addContact = async (data) => {
   return data;
 };
 
-module.exports = {
+export default {
   getAllContacts,
   getSingleContact,
   addContact,

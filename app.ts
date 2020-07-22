@@ -1,4 +1,4 @@
-const Koa = require('koa');
+const Koa = require('@types/koa');
 const bodyParser = require('koa-bodyparser');
 const compression = require('compression');
 const koaConnect = require('koa-connect');
@@ -13,14 +13,16 @@ const indexRouter = require('./routes/index');
 const worksRouter = require('./routes/works');
 const contactsRouter = require('./routes/contacts');
 
-const config = require('./config');
+import { ConfigObject } from './config';
+
+const config: ConfigObject = require('./config');
 
 const { port } = config;
-const app = new Koa();
+const app: any = new Koa();
 
 app.use(koaBunyanLogger());
 
-app.use((ctx, next) => {
+app.use((ctx: any, next: any) => {
   ctx.log.info('Got a request from %s for %s', ctx.request.ip, ctx.path);
   return next();
 });

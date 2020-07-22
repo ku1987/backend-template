@@ -1,4 +1,13 @@
-const works = [
+interface Works {
+  id: number,
+  title: string,
+  desc: string,
+  img: string,
+  body: string,
+  url: string,
+}
+
+const works: Works = [
   {
     id: 1,
     title: 'site1',

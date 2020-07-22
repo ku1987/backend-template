@@ -1,10 +1,10 @@
-const path = require('path');
+import path from 'path';
 
-const config = require('./config.js');
+import config from './config';
 
 const dbFilesBasePath = path.join(__dirname, 'db');
 
-module.exports = {
+export default {
   client: config.db.client,
   connection: {
     host: config.db.host,

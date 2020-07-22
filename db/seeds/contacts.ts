@@ -1,4 +1,4 @@
-const TABLES = require('../tables');
+import TABLES from '../tables';
 
 exports.seed = (knex) => knex(TABLES.CONTACTS).del()
   .then(() => knex(TABLES.CONTACTS).insert([

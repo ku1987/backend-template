@@ -1,6 +1,6 @@
-const knex = require('knex');
+import knex from 'knex';
 
-const dbConfig = require('./knexfile');
+import dbConfig from './knexfile';
 
 const dbConnection = knex(dbConfig);
 
@@ -14,4 +14,5 @@ const dbSeed = async () => {
     console.error(error);
   }
 };
+
 dbSeed();
