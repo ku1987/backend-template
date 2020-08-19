@@ -1,4 +1,4 @@
-exports.up = (knex) => knex.schema.createTable('contacts', (table) => {
+exports.up = (knex: any) => knex.schema.createTable('contacts', (table: any) => {
   table.increments();
   table.string('contactId').notNullable().unique();
   table.string('name').notNullable();
@@ -7,4 +7,4 @@ exports.up = (knex) => knex.schema.createTable('contacts', (table) => {
   table.integer('createdAt').notNullable();
 });
 
-exports.down = (knex) => knex.schema.dropTable('contacts');
+exports.down = (knex: any) => knex.schema.dropTable('contacts');

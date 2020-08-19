@@ -1,9 +1,9 @@
 require('dotenv').config();
 
-const userName: string = process.env.USER_NAME;
-const passWord: string = process.env.DB_PASSWORD;
-const dbName: string = process.env.DB_NAME;
-const host: string = process.env.DB_HOST;
+const userName = process.env.USER_NAME!;
+const passWord = process.env.DB_PASSWORD!;
+const dbName = process.env.DB_NAME!;
+const host = process.env.DB_HOST!;
 
 interface DBObject {
   client: string,

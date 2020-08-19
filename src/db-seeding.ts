@@ -1,4 +1,4 @@
-import knex from 'knex';
+import knex from '@types/knex';
 
 import dbConfig from './knexfile';
 

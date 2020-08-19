@@ -1,6 +1,6 @@
 import TABLES from '../tables';
 
-exports.seed = (knex) => knex(TABLES.CONTACTS).del()
+exports.seed = (knex: any) => knex(TABLES.CONTACTS).del()
   .then(() => knex(TABLES.CONTACTS).insert([
     {
       contactId: 'test-contact-id-1',

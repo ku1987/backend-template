@@ -1,17 +1,17 @@
 import Koa from 'koa';
 import bodyParser from 'koa-bodyparser';
 import compression from 'compression';
-import koaConnect from 'koa-connect';
+import koaConnect from 'connect';
 import koaBunyanLogger from 'koa-bunyan-logger';
 
 // const serve = require('koa-static');
 import json from 'koa-json';
 // const path = require('path');
-import cors from '@koa/cors';
+import cors from 'cors';
 
-import indexRouter from './routes/index';
-import worksRouter from './routes/works';
-import contactsRouter from './routes/contacts';
+import indexRouter from '../routes/index';
+import worksRouter from '../routes/works';
+import contactsRouter from '../routes/contacts';
 
 import config from './config';
 
@@ -25,9 +25,7 @@ app.use((ctx: any, next: any) => {
   return next();
 });
 
-app.use(koaConnect(compression()));
 app.use(json());
-app.use(cors());
 app.use(bodyParser());
 app.use(indexRouter.routes());
 app.use(worksRouter.routes());

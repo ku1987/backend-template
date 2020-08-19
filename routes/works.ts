@@ -3,13 +3,13 @@ import works from '../public/works';
 
 const router = new Router();
 
-router.get('/works', async (ctx) => {
+router.get('/works', async (ctx: any) => {
   ctx.body = {
     works,
   };
 });
 
-router.get('/work/:id', async (ctx) => {
+router.get('/work/:id', async (ctx: any) => {
   const workId = Number(ctx.params.id);
   const targetWork = works.find((work) => work.id === workId);
   if (!targetWork) {

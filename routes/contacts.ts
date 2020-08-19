@@ -1,12 +1,11 @@
 import Router from 'koa-router';
-import { uuid } from 'uuidv4';
-import koaBody from 'koa-body';
+import { v4 } from 'uuid';
 import contactsQuery from '../db/queries/contact';
 import common from './common';
 
 const router = new Router();
 
-router.get('/contacts', async (ctx) => {
+router.get('/contacts', async (ctx: any) => {
   try {
     const contacts = await contactsQuery.getAllContacts();
     if (!contacts) {
@@ -24,7 +23,7 @@ router.get('/contacts', async (ctx) => {
   }
 });
 
-router.get('/contacts/contact-id/:id', async (ctx) => {
+router.get('/contacts/contact-id/:id', async (ctx: any) => {
   const contactId = ctx.params.id;
   try {
     const contact = await contactsQuery.getSingleContact({ contactId });
@@ -43,8 +42,8 @@ router.get('/contacts/contact-id/:id', async (ctx) => {
   }
 });
 
-router.post('/contacts', async (ctx) => {
-  const contactId = uuid();
+router.post('/contacts', async (ctx: any) => {
+  const contactId = v4();
   const { name, mail, content } = ctx.request.body;
   try {
     // TODO contactId validation

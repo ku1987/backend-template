@@ -20,7 +20,7 @@ const getAllContacts = async () => {
   return contacts;
 };
 
-const getSingleContact = async (filter) => {
+const getSingleContact = async (filter: any) => {
   const contact: Contact[] = await knex(TABLES.CONTACTS)
     .where(filter);
   if (contact.length !== 1) {
@@ -29,7 +29,7 @@ const getSingleContact = async (filter) => {
   return contact[0];
 };
 
-const addContact = async (data) => {
+const addContact = async (data: any) => {
   await knex(TABLES.CONTACTS)
     .insert(data);
   return data;
